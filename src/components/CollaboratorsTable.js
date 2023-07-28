@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './CollaboratorsTable.css';
+import './Tables.css';
 
 import CollaboratorService from "../services/CollaboratorService";
 

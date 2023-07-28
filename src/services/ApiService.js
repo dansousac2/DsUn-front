@@ -21,14 +21,21 @@ export default class ApiService {
         return httpClient.post(url, params);
     }
 
+    delete(url) {
+        url = this.builderUrl(url);
+        return httpClient.delete(url);
+    }
+
+    post(url, params) {
+        url = this.builderUrl(url);
+        return httpClient.post(url, params);
+    }
+
     // get(url) {
     //     url = this.builderUrl(url);
     //     return httpClient.get(url);
     // }
-    // post(url, params) {
-    //     url = this.builderUrl(url);
-    //     return httpClient.post(url, params);
-    // }
+    
 
     // postWithHeaders(params) {
     //     return httpClient.post(this.endpoint, params, {
@@ -54,10 +61,7 @@ export default class ApiService {
     //    return httpClient.get(url);
     // }
     
-    // delete(url) {
-    //     url = this.builderUrl(url);
-    //     return httpClient.delete(url);
-    // }
+    
 
     // patch(url, params) {
     //     url = this.builderUrl(url);

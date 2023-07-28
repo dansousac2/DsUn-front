@@ -15,20 +15,21 @@ class Home extends React.Component {
     render() {
         return(
             <div className='Principal'>
-                <button title='Criar Novo' id='button01' ref={elem => this.buttCollab = elem} 
+                <button id='button01' ref={elem => this.buttCollab = elem} 
                     onMouseEnter={() => this.changeBackColor(this.buttCollab)}
                     onMouseLeave={() => this.turnBackGroundDefault(this.buttCollab)}
                     onClick={() => this.props.history.push("/collabs")}
                     >Colaboradores
                 </button>
                 <br/>
-                <button title='Criar Novo' id='button01' ref={elem => this.buttItem = elem} 
+                <button id='button02' ref={elem => this.buttItem = elem} 
                     onMouseEnter={() => this.changeBackColor(this.buttItem)}
                     onMouseLeave={() => this.turnBackGroundDefault(this.buttItem)}
+                    onClick={() => this.props.history.push("/items")}
                     >Itens
                 </button>
                 <br/>
-                <button title='Criar Novo' id='button01' ref={elem => this.buttCoffee = elem} 
+                <button id='button03' ref={elem => this.buttCoffee = elem} 
                     onMouseEnter={() => this.changeBackColor(this.buttCoffee)}
                     onMouseLeave={() => this.turnBackGroundDefault(this.buttCoffee)}
                     >Cafés da Manhã
