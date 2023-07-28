@@ -23,4 +23,12 @@ export default class CollaboratorService extends ApiService {
         }
         return this.urlAndBody('/removeCollab', dto);
     }
+
+    createCollaborator(cpf, name) {
+        const dto = {
+            cpf:cpf,
+            name:name
+        }
+        return this.urlAndBody('', dto);
+    }
 }

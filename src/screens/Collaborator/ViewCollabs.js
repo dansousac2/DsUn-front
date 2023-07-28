@@ -45,6 +45,10 @@ class ViewCollabs extends React.Component {
                 <b>Tela de visualização de colaboradores</b>
                 <br/>
                 <CollaboratorsTable collaborators={this.state.collaborators} editMethod={this.editCollaborator} excludeMethod={this.excludeCollaborator}/>
+                <br/>
+                <button type="button" className="btn btn-success" onClick={() => this.props.history.push('/createcollab')}
+                    >Criar Novo
+                </button>
             </div>
         )
     }
