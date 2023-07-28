@@ -30,12 +30,13 @@ class ViewCollabs extends React.Component {
         })
     }
 
-    editCollaborator = () => {
-        console.log('edição de colaborador');
+    editCollaborator = (cpf) => {
+        console.log('edição de colaborador: '  + cpf);
     }
 
-    excludeCollaborator = () => {
-        console.log('excluir colaborador');
+    excludeCollaborator = async (cpf) => {
+        await this.service.excludeCollaborator(cpf);
+        this.find();
     }
 
     render() {

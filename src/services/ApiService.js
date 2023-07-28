@@ -16,7 +16,7 @@ export default class ApiService {
         return httpClient.get(url);
     }
 
-    getWithBody(url, params) {
+    urlAndBody(url, params) {
         url = this.builderUrl(url);
         return httpClient.post(url, params);
     }
