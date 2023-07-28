@@ -4,10 +4,12 @@ import { withRouter } from 'react-router';
 
 import CollaboratorService from "../../services/CollaboratorService";
 
+import CollaboratorsTable from "../../components/CollaboratorsTable";
+
 class ViewCollabs extends React.Component {
     
     state = {
-
+        collaborators:[],
     }
 
     constructor() {
@@ -22,16 +24,26 @@ class ViewCollabs extends React.Component {
     find = () => {
         this.service.getAllCollaborators()
         .then(response => {
-            console.log(response.data);
+            this.setState({collaborators: response.data});
         }).catch(error => {
             console.log(error);
         })
+    }
+
+    editCollaborator = () => {
+        console.log('edição de colaborador');
+    }
+
+    excludeCollaborator = () => {
+        console.log('excluir colaborador');
     }
 
     render() {
         return(
             <div className="Principal">
                 <b>Tela de visualização de colaboradores</b>
+                <br/>
+                <CollaboratorsTable collaborators={this.state.collaborators} editMethod={this.editCollaborator} excludeMethod={this.excludeCollaborator}/>
             </div>
         )
     }

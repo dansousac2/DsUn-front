@@ -1,0 +1,17 @@
+table, th, td {
+    text-align: center;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+table {
+    width: 30vw;
+}
+
+th {
+    padding: 10px;
+}
+
+.Tb-collab button {
+    width: auto;
+    height: auto;
+}

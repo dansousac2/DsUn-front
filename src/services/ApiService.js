@@ -11,9 +11,14 @@ export default class ApiService {
         this.endpoint = endpoint;
     }
 
-    getAll(url) {
+    get(url) {
         url = this.builderUrl(url);
         return httpClient.get(url);
+    }
+
+    getWithBody(url, params) {
+        url = this.builderUrl(url);
+        return httpClient.post(url, params);
     }
 
     // get(url) {

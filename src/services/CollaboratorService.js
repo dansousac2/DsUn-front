@@ -7,6 +7,13 @@ export default class CollaboratorService extends ApiService {
     }
 
     getAllCollaborators() {
-        return this.getAll("/all");
+        return this.get("/all");
+    }
+
+    getCollaboratorByCpf(cpf) {
+        const dto = {
+            cpf:cpf
+        }
+        return this.getWithBody('/usingcpf', dto);
     }
 }
