@@ -14,14 +14,14 @@ export default class CollaboratorService extends ApiService {
         const dto = {
             cpf:cpf
         }
-        return this.urlAndBody('/usingcpf', dto);
+        return this.postWithBody('/usingcpf', dto);
     }
 
     excludeCollaborator(cpf) {
         const dto = {
             cpf:cpf
         }
-        return this.urlAndBody('/removeCollab', dto);
+        return this.postWithBody('/removeCollab', dto);
     }
 
     createCollaborator(cpf, name) {
@@ -29,6 +29,14 @@ export default class CollaboratorService extends ApiService {
             cpf:cpf,
             name:name
         }
-        return this.urlAndBody('', dto);
+        return this.postWithBody('', dto);
+    }
+
+    updateCollaboratorName(cpf, name) {
+        const dto = {
+            cpf:cpf,
+            name:name
+        }
+        return this.put('', dto);
     }
 }

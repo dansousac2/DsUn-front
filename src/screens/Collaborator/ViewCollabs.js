@@ -30,8 +30,9 @@ class ViewCollabs extends React.Component {
         })
     }
 
-    editCollaborator = (cpf) => {
-        console.log('edição de colaborador: '  + cpf);
+    editCollaboratorName = (cpf) => {
+        localStorage.setItem('toUpdate', cpf);
+        this.props.history.push('/editcollabname');
     }
 
     excludeCollaborator = async (cpf) => {
@@ -44,7 +45,7 @@ class ViewCollabs extends React.Component {
             <div className="Principal">
                 <b>Tela de visualização de colaboradores</b>
                 <br/>
-                <CollaboratorsTable collaborators={this.state.collaborators} editMethod={this.editCollaborator} excludeMethod={this.excludeCollaborator}/>
+                <CollaboratorsTable collaborators={this.state.collaborators} editMethod={this.editCollaboratorName} excludeMethod={this.excludeCollaborator}/>
                 <br/>
                 <button type="button" className="btn btn-success" onClick={() => this.props.history.push('/createcollab')}
                     >Criar Novo
