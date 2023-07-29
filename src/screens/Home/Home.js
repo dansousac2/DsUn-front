@@ -32,6 +32,7 @@ class Home extends React.Component {
                 <button id='button03' ref={elem => this.buttCoffee = elem} 
                     onMouseEnter={() => this.changeBackColor(this.buttCoffee)}
                     onMouseLeave={() => this.turnBackGroundDefault(this.buttCoffee)}
+                    onClick={() => this.props.history.push("/breakfasts")}
                     >Cafés da Manhã
                 </button>
             </div>

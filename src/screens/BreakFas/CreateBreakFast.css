@@ -1,0 +1,25 @@
+.Part01 .Inputs{
+    display: grid;
+    text-align: center;
+}
+
+.Items-area{
+    width: 21vw;
+    height:18vh;
+    background-color: rgb(244, 222, 163);
+    overflow-y: scroll;
+    margin-left: 3vw;
+    text-align: center;
+}
+
+.Principal .Part01 {
+    display: flex;
+}
+
+.Tb-collab {
+    width: 20vw;
+}
+
+#bttcnbf01 {
+    margin-left: 2vw;
+}

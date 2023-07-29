@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from 'react-router';
 
-import ItemService from "./ItemService";
+import ItemService from "../../services/ItemService";
 
 class CreateItem extends React.Component {
 
