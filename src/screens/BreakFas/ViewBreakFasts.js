@@ -50,6 +50,7 @@ class ViewBreakFasts extends React.Component {
                 <br/>
                 <button type="button" className="btn btn-primary" onClick={() => console.log('criar função')}
                     >Cheking do Café de hoje
+                    {/*TODO função de Checagem */}
                 </button>
             </div>
         )
