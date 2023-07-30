@@ -3,7 +3,7 @@ import axios, { AxiosHeaders } from "axios";
 const API_BASE_HOST = 'desuni-back-production.up.railway.app';
 
 export const httpClient = axios.create ({
-    // baseURL:'http://localhost:8080/api',
+    // baseURL changed to use Host railway
     baseURL:`https://${API_BASE_HOST}/api`,
     withCredentials: true,
 });
